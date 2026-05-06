@@ -1,0 +1,17 @@
+                                                         BUSINESS QUESTION
+What factors drive higher lifetime value?
+
+                     QUERY
+SELECT
+CASE WHEN discount_usage_rate > 20 THEN 'HIGH DISCOUNT'
+ELSE 'low discount'
+END AS DISCOUNT_LEVELS, 
+ROUND(AVG(lifetime_value),2)Total_revenue
+FROM ecommerce_data
+GROUP BY DISCOUNT_LEVELS;
+
+INSIGHT;
+Customers who use higher discounts tend to have higher purchases and lifetime value, but this does not fully mean discounts alone are driving the revenue.
+
+Recommendation (fixed)
+Instead of always giving discounts, we can use them strategically during certain periods and combine them with other incentives to maintain profit.
