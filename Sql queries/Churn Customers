@@ -1,0 +1,19 @@
+                                                         BUSINESS QUESTION
+What behavior changes should we focus on to reduce churn? 
+
+                                    QUERY
+SELECT
+CASE
+WHEN days_since_last_purchase > 20 THEN 'AT RISK'
+ELSE 'still customers'
+END AS customers,
+COUNT(*)		
+customer_count
+FROM ecommerce_data
+GROUP BY customers;
+
+                      Insight:
+Customers who stay longer without purchasing are more likely to churn, making inactivity a key signal to monitor.
+
+            Recommendation: 
+We should track inactive customers and re-engage them early through reminders, offers, and targeted communication before they stop purchasing completely
