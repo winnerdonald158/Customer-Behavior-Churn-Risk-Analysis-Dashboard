@@ -1,0 +1,23 @@
+                                                            BUSINESSS QUESTION
+Where are we losing customers in the purchase journey (drop-off)?
+
+                          QUERY
+SELECT
+CASE
+    WHEN cart_abandonment_rate > 20 THEN 'High Drop-off'
+    WHEN cart_abandonment_rate > 10 THEN 'Medium Drop-off'
+    ELSE 'Low Drop-off'
+END AS dropoff_level,
+COUNT(*) AS customer_count
+FROM ecommerce_data
+GROUP BY dropoff_level;
+
+INSIGHT
+Many customers fall into the high drop-off group, which means many customers are leaving before completing their purchase. This shows there
+is a problem in the checkout or decision stage.
+
+
+RECOMMENDATION:
+Display all costs early in the shopping process to avoid last-minute surprises, Reduce the number of steps in the checkout process, Accept a rang
+of payment methods
+
