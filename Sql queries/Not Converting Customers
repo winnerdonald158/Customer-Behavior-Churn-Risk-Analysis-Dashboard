@@ -1,0 +1,19 @@
+                                                               BUSINESS QUESTION
+Which customers are highly engaged but not converting into buyers?
+
+                                     QUERY
+SELECT
+CASE
+WHEN login_frequency > 15 
+     AND total_purchases < 3 THEN 'High Engagement - Low Buyers'
+ELSE 'Others'
+END AS customer_group,
+COUNT(*) AS customer_count
+FROM ecommerce_data
+GROUP BY customer_group;
+
+Insight:
+There are customers who interact a lot with the platform but are not making purchases. This means interest is there, but something is stopping them from 
+
+Recommendation
+We should target these customers with personalized offers, better product display, and maybe simplify the buying process to convert them into actual buyers.
