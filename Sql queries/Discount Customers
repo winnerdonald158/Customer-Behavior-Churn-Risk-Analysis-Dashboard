@@ -1,0 +1,20 @@
+                                                                 BUSISNESS QUESTION
+Which customers respond best to discounts, and are they profitable?
+
+           QUERY
+SELECT
+CASE
+WHEN lifetime_value > 2000 then 'high value customers'
+WHEN lifetime_value > 1000 then 'mid value customers'
+ELSE 'low value customers'
+END AS Customers_status,
+ROUND(AVG(discount_usage_rate),2) avg_discount,
+ROUND(AVG(lifetime_value) ,2)total_revenue
+FROM ecommerce_data
+GROUP BY Customers_status;
+
+                     Insight
+Mid-value customers respond more to discounts compared to other groups, showing they are more sensitive to pricing.
+
+                Recommendation 
+Discounts should be used carefully and not too frequently. Other incentives can also be introduced to avoid reducing profit.
