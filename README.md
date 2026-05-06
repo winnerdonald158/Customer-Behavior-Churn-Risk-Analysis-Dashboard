@@ -1,7 +1,7 @@
-                                                            Customer Behavior Churn Risk Analysis
+                                          Customer Behavior Churn Risk Analysis
 Excel, PostgreSQL and Power BI analysis of e-commerce customer data to understand customer behavior, purchasing patterns, engagement levels, and churn risk.
 
-                                                                      Project Overview
+                                          Project Overview
 This project focuses on analyzing customer behavior in an e-commerce business to understand why customers engage with the platform but fail to convert into buyers, and why some customers eventually stop purchasing.
 
 Using Excel for data cleaning, PostgreSQL for business analysis, and Power BI for visualization, I explored customer purchasing patterns, engagement metrics, discount behavior, customer value segmentation, and churn indicators to generate meaningful business insights.
@@ -12,12 +12,12 @@ ii. To identify high-value and at-risk customers
 iii. To discover factors affecting purchases and churn
 iv. To suggest practical business recommendations to improve revenue and customer retention
 
-                                                                      Tools I Used
+                                               Tools I Used
 Excel
 PostgreSQL
 Power BI
                                                                     
-                                                                    Skills Demonstrated
+                                               Skills Demonstrated
 Data Cleaning
 SQL Queries
 Aggregation Functions
@@ -38,7 +38,7 @@ Identify high-value customers driving company revenue
 Analyze cart abandonment and drop-off behavior
 Provide business recommendations to improve customer retention and conversion
 
-                                                         Repository Structure
+                                                        Repository Structure
 
 excel-analysis/ → Data cleaning
 
