@@ -1,0 +1,16 @@
+                                                           BUSINESS QUESTION
+Are frequent visitors actually becoming buyers?
+
+                                   QUERY
+SELECT
+login_frequency,
+ROUND(AVG(total_purchases),2) AS avg_purchases
+FROM ecommerce_data
+GROUP BY login_frequency
+ORDER BY login_frequency;
+
+INSIGHT;
+Customers with higher login frequency tend to have higher purchases, showing that engagement increases the chances of buying, but it does not guarantee it.
+
+Recommendation 
+We should keep the platform active and engaging so customers keep coming back, which can increase the chances of them purchasing.
