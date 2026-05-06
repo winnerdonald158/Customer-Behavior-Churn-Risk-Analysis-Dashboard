@@ -1,0 +1,20 @@
+                                                      BUSINESS QUESTION
+Which group of customers should we target to increase revenue quickly?
+
+                               QUERY
+SELECT
+CASE
+WHEN lifetime_value > 1500 then 'high value customers'
+ELSE 'low value customers'
+END AS Customers_status,
+ROUND(AVG(discount_usage_rate),2) avg_discount,
+ROUND(AVG(lifetime_value),2)total_revenue,
+ROUND(AVG(total_purchases),2)
+FROM ecommerce_data
+GROUP BY Customers_status;
+
+                            Insight 
+High-value customers generate more revenue, but they are already contributing. There is also an opportunity to grow low-value customers into higher-value customers.
+
+                         Recommendation 
+We should maintain strong engagement with high-value customers while also focusing on improving low-value customers through targeted campaigns to increase overall revenue.
