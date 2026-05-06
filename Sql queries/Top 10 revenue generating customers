@@ -1,0 +1,19 @@
+                                        BUSINESS QUESTION
+Which customers are generating the most revenue, and how can we retain them?
+
+                       QUERY
+SELECT
+*
+FROM ecommerce_data
+ORDER BY lifetime_value DESC
+LIMIT 10;
+
+
+Insight:
+These are the top 10 customers contributing the most revenue. The business is currently relying on a small group of high-value customers,
+which can be risky if any of them stop purchasing
+
+
+Recommendation
+We should strengthen retention for these customers by giving them better experience like faster service, early access to products, and highlighting
+their importance. At the same time, we should also focus on converting more customers into high-value customers.
