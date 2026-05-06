@@ -1,0 +1,23 @@
+                                                    BUSINESS QUESTION
+What behaviors indicate a customer is about to stop purchasing?
+
+                                      QUERY
+SELECT
+CASE
+WHEN days_since_last_purchase > 30 THEN 'at risk'
+ELSE 'Active'
+END AS Customers_Level,
+ROUND(AVG(login_frequency),2) avg_login,
+ROUND(AVG(total_purchases),2) avg_purchases,
+ROUND(AVG(email_open_rate),2) avg_email_opening,
+ROUND(AVG(social_media_engagement_score),2) avg_social_media_engagement,
+ROUND(AVG(mobile_app_usage),2)avg_mobile_usage
+FROM ecommerce_data
+GROUP BY Customers_Level;
+
+INSIGHT:
+Customers at risk show lower login frequency, lower engagement, and fewer purchases. This shows a gradual drop-in activity before they stop buying.
+
+RECOMMENDATION
+We need to re-engage these customers early by creating awareness and giving incentives like loyalty rewards, limited-time offers to bring them back
+before they fully stop purchasing.
