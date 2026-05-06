@@ -1,0 +1,24 @@
+                                                           BUSINESS QUESTIONS
+What differentiates high-value customers from low-value customers?
+
+                                      QUERY
+SELECT
+CASE
+WHEN lifetime_value > 1500 then 'high value customers'
+ELSE 'low value customers'
+END AS Customers_status,
+ROUND(AVG(discount_usage_rate),2) avg_discount,
+ROUND(AVG(lifetime_value) ,2)total_revenue,
+ROUND(AVG(login_frequency),2),
+ROUND(AVG(product_reviews_written),2),
+ROUND(AVG(cart_abandonment_rate),2)
+FROM ecommerce_data
+GROUP BY Customers_status;
+
+                                        Insight:
+High-value customers not only generate more revenue but also show higher engagement, such as more logins and more interaction with products compared
+to low-value customers.
+
+                                     Recommendation: 
+We can reward high-value customers with benefits like loyalty rewards, while also encouraging low-value customers to increase their engagement and purchases.
+
