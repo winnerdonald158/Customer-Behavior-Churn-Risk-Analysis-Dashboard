@@ -166,7 +166,7 @@ Winner Donald
 
 📧 winnerdonald158@gmail.com
 
-🔗 LinkedIn
+🔗 LinkedIn www.linkedin.com/in/winner-donald
 
 💻 GitHub
 
